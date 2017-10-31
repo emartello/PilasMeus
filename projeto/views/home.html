@@ -1,0 +1,44 @@
+<h1 class="cover-heading">MEUS LANÇAMENTOS</h1>
+              <p class="lead">
+              <button class="btn btn-info btn-lg" type="button">
+                Receitas R$ <span class="badge">8.500,00</span>
+              </button>
+
+              <button class="btn btn-danger btn-lg" type="button">
+                Despesas R$ <span class="badge">5.500,00</span>
+              </button>
+
+              <button class="btn btn-default btn-lg" type="button">
+                Saldo R$ <span class="badge">3.000,00</span>
+              </button>
+              </p>
+
+              <table class="table">
+                  <thead>
+                    <tr>
+                      <th width="100">Data</th>
+                      <th>Categoria</th>
+                      <th>Descrição</th>
+                      <th width="100">Valor R$</th>
+                      <th width="30">#</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr ng-repeat="x in lancamentos">
+                      <th>{{x.data}}</th>
+                      <td>{{x.nome}}</td>
+                      <td>{{x.descricao}}</td>
+                      <td>
+                        <span class="label label-danger">{{x.valor}}</span>
+                      </td>
+                      <td>
+                        <button ng-click="excluir(x.idlancamento)" type="button" class="btn btn-default btn-xs" title="Excluir lançamento">
+                          <span class="glyphicon glyphicon-trash"></span>
+                        </button>
+                      </td>
+                    </tr>
+
+
+                   
+                  </tbody>
+                </table>

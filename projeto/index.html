@@ -1,0 +1,61 @@
+<!doctype html>
+<html ng-app="Projeto">
+<head>
+	<title>Meu DinDin</title>
+	<!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="quiz.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="pt-br">
+      <!-- Includes dos arquivos angular -->
+</head>
+<body>
+
+	<div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <nav class="navbar navbar-inverse navbar-fixed-top">
+                <h3 class="masthead-brand">Meu DinDin</h3>
+                <ul class="nav masthead-nav">
+                  <li><a href="#/home">Home</a></li>
+                  <li><a href="#/receita">Nova receita</a></li>
+                  <li><a href="#/despesa">Nova despesa</a></li>
+                  <li><a href="#/categoria">Nova categoria</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover" ng-view>
+            
+
+
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Meu DinDin <a href="http://unoesc.edu.br">Unoesc</a>, by <a href="https://rafa12.com.br">@Rafa12</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>	
+
+
+	<!-- Placed at the end of the document so the pages load faster -->
+    <script src="bootstrap/js/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="angular1.2/angular.min.js"></script>
+    <script src="angular1.2/angular-route.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
