@@ -30,7 +30,7 @@ function home($scope, $http) {
 	$scope.excluir = function(id){
 		if (confirm('Deseja excluir o lancamento ('+ id +') agora?'))
 			$http
-				.get('http://localhost:8000/api/Lancamentos/'+id)
+				.delete('http://localhost:8000/api/Lancamentos/'+id)
 				.success( function(retorno){
 					$scope.listar();
 				} );
@@ -98,7 +98,7 @@ function categoria($scope, $http, $location) {
 	$scope.excluir = function(id){
 		if (confirm('Deseja excluir a categoria ('+ id +') agora?'))
 			$http
-				.get('http://127.0.0.1:8000/api/Categorias/'+id)
+				.delete('http://127.0.0.1:8000/api/Categorias/'+id)
 				.success( function(retorno){
 					$scope.listar();
 				} );
