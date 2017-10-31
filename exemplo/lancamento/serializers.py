@@ -3,6 +3,7 @@ from rest_framework import serializers
 from .models import *
 
 class LancamentoSerializer(serializers.ModelSerializer):
+	
 	class Meta:
 		model = Lancamento
 		fields = ('idlancamento', 'data', 'tipo', 'descricao','valor','idcategoria')

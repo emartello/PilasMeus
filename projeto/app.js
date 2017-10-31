@@ -73,7 +73,37 @@ function receita($scope, $http, $location) {
 	$scope.listar();
 }
 
-function despesa($scope) {
+function despesa($scope, $http, $location) {
+
+	$scope.categorias = {};
+	$scope.lancamento = {
+		tipo: 1,
+		descricao: '',
+		valor: 0,
+		idcategoria: 0
+	};
+
+	$scope.salvar = function(){
+		console.log($scope.lancamento);
+		$http
+			.post('http://localhost:8000/api/Lancamentos/', $scope.lancamento)
+			.success( function(retorno){ 
+				$location.path('/home'); 
+			} );
+
+	}
+
+	$scope.listar = function(){
+		$http
+			.get('http://127.0.0.1:8000/api/Categorias/')
+			.success(function(pacote){
+				$scope.categorias = pacote;
+				console.log($scope.categorias);
+			});
+	}
+
+
+	$scope.listar();
 	
 }
 
