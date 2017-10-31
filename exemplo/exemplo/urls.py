@@ -20,7 +20,5 @@ from django.conf.urls import url, include
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^api/', include(Router.urls)),
-    url(r'^categorias/', include(Router.urls)),
-    url(r'^lancamentos/', include(Router.urls))
+    url(r'^api/', include(Router.urls))
 ]
