@@ -12,3 +12,6 @@ class CategoriaSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Categoria
 		fields = ('idcategoria', 'nome')
+
+
+#Geracao dos JSON, e criacaoo dos vinculos para tal tarefa

@@ -1,3 +1,4 @@
+#Cria as rotas de acordo com a url ditgitada, direcionando para as views
 from rest_framework.routers import DefaultRouter
 from . import views
 from django.conf.urls import url, include

@@ -25,7 +25,7 @@ SECRET_KEY = '&o)%^c17_=$qq#)ub)c90-0rkt9d^ynxyt99s7vberp%@4w+v3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*'] ###########
 
 
 # Application definition
@@ -45,13 +45,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
-    'lancamento'
+    'rest_framework', ###########
+    'lancamento' ############
 ]
 
 
 CORS_ORIGIN_WHITELIST = (
-    'localhost:8081'
+    'localhost:8081' ############
 )
 
 
@@ -73,8 +73,8 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware'
+    'django.contrib.messages.middleware.MessageMiddleware', #######
+    'django.middleware.clickjacking.XFrameOptionsMiddleware' #######
     
 ]
 
