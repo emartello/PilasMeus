@@ -18,12 +18,19 @@ app.controller('categoria', categoria);
 function home($scope, $http) {
 	$scope.lancamentos = {};
 
+	$scope.sumreceita=0;
+	$scope.sumdespesa=0;
+
 	$scope.listar = function(){
 		$http
 			.get('http://localhost:8000/api/Lancamentos/')
 			.success(function(pacote){
 				$scope.lancamentos = pacote;
-				console.log($scope.lancamentos);
+				$scope.sumreceita=0;
+				$scope.sumdespesa=0;
+			
+				pacote.filter(x => x.tipo == 0).map(x => $scope.sumreceita+= x.valor );
+				pacote.filter(x => x.tipo == 1).map(x => $scope.sumdespesa+= x.valor );
 			});
 	}
 
